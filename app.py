@@ -5,7 +5,7 @@ from streamlit import session_state as ss
 st.set_page_config(layout="wide")
 
 
-st.title("CRED assignment")
+st.title("EMI OPTIMIZER USING GREEDY APPROACH")
 
 def create_emi_table(p,r,n):
     dic = {
@@ -47,7 +47,7 @@ columns = st.columns(2)
 
 
 with columns[0]:
-    st.header("Question 1")
+    st.header("EMI AMORTIZATION TABLE GENERATOR")
     tenure = st.number_input("Tenure in months", key = "T", value = 6)
     p = loan_value
     r = monthly_interest_rate
@@ -108,7 +108,7 @@ with columns[0]:
 
 
 with columns[1]:
-    st.header("Question 2")
+    st.header("PORTFOLIO OF MULTIPLE EMIs AMORTIZATION TABLE")
     no = st.number_input("Number of loans", value = 12)
     loans = [0 for i in range(no)]
     default_distribution = [5, 5, 10, 2, 5, 25, 2, 2, 15, 2, 2, 25]
@@ -209,7 +209,7 @@ with columns[1]:
     st.plotly_chart(fig)
        
 
-    st.header("Question 3")
+    st.header("EMI PORTFOLIO OPTIMISER USING GREEDY APPROACH")
     with st.expander("Open to edit foreclosure curve"):
         foreclosure_tenure = int(st.number_input("Enter the number of months in the foreclosure curve", 12))
         default_values = [4.44, 2.58, 2.47, 2.35, 2.32, 2.36, 2.17, 2.22, 2.26, 2.17, 2.33, 2.72]
